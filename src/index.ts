@@ -1,4 +1,4 @@
-import { logger } from "../utils/logger";
+import { logger } from "./utils/logger";
 import { create, Whatsapp, Message, Chat } from "venom-bot";
 import puppeteer from "puppeteer";
 
@@ -56,7 +56,10 @@ async function getValidDynamicImageUrl(link: string): Promise<string | null> {
 
     logger.info(`Extracted itemId: ${itemId}`);
 
-    const browser = await puppeteer.launch({ headless: true ,  args: ["--no-sandbox", "--disable-setuid-sandbox"],});
+    const browser = await puppeteer.launch({
+      headless: true,
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    });
     const page = await browser.newPage();
     await page.goto(link, { waitUntil: "domcontentloaded" });
 
