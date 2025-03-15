@@ -245,3 +245,89 @@
 {"level":50,"time":1738245302339,"pid":33865,"hostname":"Mac","msg":"Error extracting dynamic image URL:"}
 {"level":30,"time":1738245302339,"pid":33865,"hostname":"Mac","msg":"image URL: "}
 {"level":40,"time":1738245302339,"pid":33865,"hostname":"Mac","msg":"Failed to find a valid dynamic image URL. Sending link only."}
+{"level":30,"time":1741974173648,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741974176975,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741974176975,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741974177658,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741974184199,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741974184210,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"QR Code:"}
+{"level":30,"time":1741974230246,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741974230448,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741974230448,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741974230542,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741974230813,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: Group hantar link MEDINA TACKLE, Group ID: 120363193416397252@g.us"}
+{"level":30,"time":1741974230815,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: Gshock AS37 - AUCTION, Group ID: 120363354800774217@g.us"}
+{"level":30,"time":1741974230815,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: Gshock AS37 MERCARI🎌💴, Group ID: 120363335264647876@g.us"}
+{"level":30,"time":1741974230816,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: MEDINA TACKLE MERCARI, Group ID: 120363357006932873@g.us"}
+{"level":30,"time":1741974230816,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: EMPIRE GSHOCK MERCARI, Group ID: 120363373055075846@g.us"}
+{"level":30,"time":1741974230817,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: EMPIRE GSHOCK YAHOO AUCTION, Group ID: 120363378799216455@g.us"}
+{"level":30,"time":1741974230817,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: Testing 2, Group ID: 120363392164588023@g.us"}
+{"level":30,"time":1741974230818,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: Testing 1, Group ID: 120363391498432136@g.us"}
+{"level":30,"time":1741974230818,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: Group hantar link as37, Group ID: 120363354122333391@g.us"}
+{"level":30,"time":1741974230818,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Found 9 group(s)."}
+{"level":30,"time":1741974346983,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Message is not from Group A."}
+{"level":30,"time":1741974405010,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Message is from Group A."}
+{"level":30,"time":1741974405010,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"No ✅ emoji found in the message."}
+{"level":30,"time":1741974425089,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Message is from Group A."}
+{"level":30,"time":1741974425089,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"✅ emoji detected in the message."}
+{"level":30,"time":1741974425089,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Quoted message detected."}
+{"level":30,"time":1741974425089,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Extracting link from message: https://jp.mercari.com/item/m81710576892"}
+{"level":30,"time":1741974425089,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Extracted link: https://jp.mercari.com/item/m81710576892"}
+{"level":30,"time":1741974426879,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Message is not from Group A."}
+{"level":30,"time":1741974430475,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Navigated to the link, waiting for image to load."}
+{"level":50,"time":1741974435491,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Error extracting dynamic image URL:"}
+{"level":30,"time":1741974435548,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"image URL: "}
+{"level":40,"time":1741974435548,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Failed to find a valid dynamic image URL. Sending link only."}
+{"level":30,"time":1741974443016,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Message is not from Group A."}
+{"level":30,"time":1741974478864,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Message is not from Group A."}
+{"level":30,"time":1741974498390,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Message is from Group A."}
+{"level":30,"time":1741974498390,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"✅ emoji detected in the message."}
+{"level":30,"time":1741974498390,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Quoted message detected."}
+{"level":30,"time":1741974498390,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Extracting link from message: https://jp.mercari.com/item/m94601069034"}
+{"level":30,"time":1741974498391,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Extracted link: https://jp.mercari.com/item/m94601069034"}
+{"level":30,"time":1741974502288,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Navigated to the link, waiting for image to load."}
+{"level":30,"time":1741974502354,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Valid Image URL Found: https://static.mercdn.net/item/detail/orig/photos/m94601069034_1.jpg?1737195247"}
+{"level":30,"time":1741974502354,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"image URL: "}
+{"level":30,"time":1741974505143,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Forwarded to Group B with image and caption: A2\nhttps://jp.mercari.com/item/m94601069034"}
+{"level":30,"time":1741974897349,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Message is from Group A."}
+{"level":30,"time":1741974897349,"pid":9830,"hostname":"Izzats-MacBook-Pro.local","msg":"Sequence prefix updated to: AB and starting number set to: 1"}
+{"level":30,"time":1741975050192,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741975052852,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741975052853,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741975053455,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741975057132,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741975057334,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741975057334,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741975057485,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Session status:"}
+{"level":30,"time":1741975057787,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: Testing 1, Group ID: 120363391498432136@g.us"}
+{"level":30,"time":1741975057788,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: Testing 2, Group ID: 120363392164588023@g.us"}
+{"level":30,"time":1741975057789,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: Gshock AS37 - AUCTION, Group ID: 120363354800774217@g.us"}
+{"level":30,"time":1741975057790,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: Group hantar link MEDINA TACKLE, Group ID: 120363193416397252@g.us"}
+{"level":30,"time":1741975057791,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: Gshock AS37 MERCARI🎌💴, Group ID: 120363335264647876@g.us"}
+{"level":30,"time":1741975057791,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: MEDINA TACKLE MERCARI, Group ID: 120363357006932873@g.us"}
+{"level":30,"time":1741975057792,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: EMPIRE GSHOCK MERCARI, Group ID: 120363373055075846@g.us"}
+{"level":30,"time":1741975057792,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: EMPIRE GSHOCK YAHOO AUCTION, Group ID: 120363378799216455@g.us"}
+{"level":30,"time":1741975057793,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Group Name: Group hantar link as37, Group ID: 120363354122333391@g.us"}
+{"level":30,"time":1741975057793,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Found 9 group(s)."}
+{"level":30,"time":1741975086901,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Message is from Group A."}
+{"level":30,"time":1741975086901,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Sequence prefix updated to: f and starting number set to: 96"}
+{"level":30,"time":1741975102557,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Message is from Group A."}
+{"level":30,"time":1741975102557,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Sequence prefix updated to: F and starting number set to: 96"}
+{"level":30,"time":1741975116902,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Message is from Group A."}
+{"level":30,"time":1741975116903,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"✅ emoji detected in the message."}
+{"level":30,"time":1741975116903,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Quoted message detected."}
+{"level":30,"time":1741975116903,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Extracting link from message: https://jp.mercari.com/item/m26826760397"}
+{"level":30,"time":1741975116903,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Extracted link: https://jp.mercari.com/item/m26826760397"}
+{"level":30,"time":1741975120605,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Navigated to the link, waiting for image to load."}
+{"level":30,"time":1741975120674,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Valid Image URL Found: https://static.mercdn.net/item/detail/orig/photos/m26826760397_1.jpg?1741959827"}
+{"level":30,"time":1741975120674,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"image URL: "}
+{"level":30,"time":1741975124010,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Forwarded to Group B with image and caption: F96\nhttps://jp.mercari.com/item/m26826760397"}
+{"level":30,"time":1741975433344,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Message is from Group A."}
+{"level":30,"time":1741975433344,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"✅ emoji detected in the message."}
+{"level":30,"time":1741975433344,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Quoted message detected."}
+{"level":30,"time":1741975433344,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Extracting link from message: 「新品未使用　24 タトゥーラ TW 1… (¥15,900)」を\n#ヤフーフリマ で販売中！\nhttps://paypayfleamarket.yahoo.co.jp/item/z401574276?cpt_s=payf&cpt_m=share&cpt_n=item&cpt_c=ios\n【3/31まで】アプリをまだ持ってなかったら、紹介コード「54XYLD」入力で、500円相当もらえるよ！※条件・上限あり\nアプリのインストールはこちらから⬇\nhttps://app.adjust.com/dbz1n5u"}
+{"level":30,"time":1741975433345,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Extracted link: https://paypayfleamarket.yahoo.co.jp/item/z401574276?cpt_s=payf&cpt_m=share&cpt_n=item&cpt_c=ios"}
+{"level":30,"time":1741975435141,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Navigated to the link, waiting for image to load."}
+{"level":50,"time":1741975440168,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Error extracting dynamic image URL:"}
+{"level":30,"time":1741975440222,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"image URL: "}
+{"level":40,"time":1741975440222,"pid":10533,"hostname":"Izzats-MacBook-Pro.local","msg":"Failed to find a valid dynamic image URL. Sending link only."}
