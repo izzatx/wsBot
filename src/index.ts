@@ -1,6 +1,5 @@
 import { logger } from "../utils/logger";
 import { create, Whatsapp, Message, Chat } from "venom-bot";
-import { Builder, By, until } from "selenium-webdriver";
 
 const groupAID = "120363193416397252@g.us";
 const groupBID = "120363357006932873@g.us";
