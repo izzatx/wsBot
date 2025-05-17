@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "build": "tsc",
+    "start": "npm run build && node dist/src/index.js",
     "dev": "ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint 'src/**/*.{js,ts}'",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@eslint/js": "^9.18.0",
     "@types/selenium-webdriver": "^4.1.28",
+    "@types/spinnies": "^0.5.3",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.2",

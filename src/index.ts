@@ -21,6 +21,19 @@ async function initializeBot(): Promise<Whatsapp | null> {
       {
         folderNameToken: "tokens",
         headless: "new",
+        browserArgs: [
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+          "--disable-dev-shm-usage",
+          "--disable-gpu",
+          "--disable-background-timer-throttling",
+          "--disable-renderer-backgrounding",
+          "--disable-web-security",
+          "--no-zygote",
+          "--single-process",
+          "--no-first-run",
+          "--no-default-browser-check",
+        ],
       },
     );
     return client;
