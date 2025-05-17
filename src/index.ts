@@ -2,47 +2,28 @@ import { logger } from "../utils/logger";
 import { create, Whatsapp, Message, Chat } from "venom-bot";
 import { Builder, By, until } from "selenium-webdriver";
 
-// Replace these with actual group IDs
-const groupAID = "120363193416397252@g.us"; // Group A
-const groupBID = "120363357006932873@g.us"; // Group B
+const groupAID = "120363193416397252@g.us";
+const groupBID = "120363357006932873@g.us";
 
-// Counter for numbering forwarded messages
 let linkCounter = 1;
-let sequencePrefix = "A"; // Default prefix
-
-const forwardedLinksGlobal = new Set<string>(); // Global history of forwarded links
+let sequencePrefix = "A";
+const forwardedLinksGlobal = new Set<string>();
 
 async function initializeBot(): Promise<Whatsapp | null> {
   try {
     const client = await create(
       "whatsapp-bot",
-      (base64Qr, asciiQR) => {
-        console.log("Scan the QR code below:");
-        console.log(asciiQR);
+      (asciiQR) => {
+        logger.info("QR Code:", asciiQR);
       },
       (statusSession) => {
-        console.log("Session Status:", statusSession);
+        logger.info("Session status:", statusSession);
       },
       {
-        headless: "new", // Run in headless mode
-        browserArgs: [
-          "--no-sandbox",
-          "--disable-setuid-sandbox",
-          "--disable-dev-shm-usage",
-          "--disable-gpu",
-          "--disable-software-rasterizer",
-          "--remote-debugging-port=9222",
-          "--disable-background-networking",
-          "--disable-default-apps",
-          "--disable-extensions",
-          "--disable-sync",
-          "--hide-scrollbars",
-          "--mute-audio",
-        ],
-        folderNameToken: "tokens", // Ensure token storage
+        folderNameToken: "tokens",
+        headless: "new",
       },
     );
-
     return client;
   } catch (error) {
     logger.error("Error initializing Venom Bot:", error);
@@ -53,10 +34,8 @@ async function initializeBot(): Promise<Whatsapp | null> {
 async function handleIncomingMessage(client: Whatsapp, message: Message) {
   try {
     logger.info("Received:", message.body);
-
     if (message.body.toLowerCase() === "hi") {
       await client.sendText(message.from, "Hello! This is WhatsApp Bot.");
-      logger.info(`Replied to ${message.from}`);
     }
   } catch (error) {
     logger.error("Error handling incoming message:", error);
@@ -67,16 +46,16 @@ async function setupGroupMessageHandler(client: Whatsapp) {
   client.onMessage(async (message: Message) => {
     try {
       if (message.from !== groupAID) {
-        logger.info("Message is not from Group A.");
         return;
       }
 
-      logger.info("Message is from Group A.");
+      const messageBody = message.body.toLowerCase();
+      if (await handlePrefixChange(client, message, messageBody)) {
+        return;
+      }
 
       if (message.body.includes("✅")) {
         await processLinkMessage(client, message);
-      } else {
-        logger.info("No ✅ emoji found in the message.");
       }
     } catch (error) {
       logger.error("Error handling message in Group A:", error);
@@ -84,51 +63,90 @@ async function setupGroupMessageHandler(client: Whatsapp) {
   });
 }
 
+async function handlePrefixChange(
+  client: Whatsapp,
+  message: Message,
+  messageBody: string,
+): Promise<boolean> {
+  if (!messageBody.startsWith("bot change ")) {
+    return false;
+  }
+
+  const newCommand = messageBody.replace(/^bot change /i, "").trim();
+
+  // Ensure correct prefix and number extraction
+  const match = newCommand.match(/^([A-Za-z]+)(\d+)$/);
+
+  if (!match) {
+    logger.warn("Invalid format provided.");
+    await client.sendText(
+      message.from,
+      "Invalid format. Usage: bot change <prefix><startingNumber> (e.g., bot change AB7).",
+    );
+    return true;
+  }
+
+  sequencePrefix = match[1].toUpperCase(); // Convert to uppercase
+  linkCounter = parseInt(match[2], 10); // Convert number properly
+
+  // Force logging output
+  logger.info(
+    `Updated prefix: ${sequencePrefix}, Starting from: ${linkCounter}`,
+  );
+  logger.info(
+    `Updated prefix: ${sequencePrefix}, Starting from: ${linkCounter}`,
+  );
+
+  await new Promise((resolve) => setTimeout(resolve, 500));
+  await client.sendText(
+    message.from,
+    `Sequence prefix updated to ${sequencePrefix}, starting from ${linkCounter}.`,
+  );
+
+  return true;
+}
+
 async function processLinkMessage(client: Whatsapp, message: Message) {
   try {
-    logger.info("✅ emoji detected in the message.");
-
     const link = await extractMessageLink(message);
-    if (!link) {
-      logger.warn("No valid link found in the message.");
+    if (!link || forwardedLinksGlobal.has(link)) {
       return;
     }
-
-    if (forwardedLinksGlobal.has(link)) {
-      logger.info(`Link "${link}" already processed globally. Skipping.`);
-      return;
-    }
-
     forwardedLinksGlobal.add(link);
-    await forwardMessageWithImage(client, link);
+    await forwardMessage(client, link);
   } catch (error) {
     logger.error("Error processing link message:", error);
   }
 }
 
 async function extractMessageLink(message: Message): Promise<string | null> {
+  if (message.quotedMsgObj) {
+    return extractLink((message.quotedMsgObj as any).body || "");
+  }
   return extractLink(message.body);
 }
 
-async function forwardMessageWithImage(client: Whatsapp, link: string) {
-  try {
-    const imageUrl = await getValidDynamicImageUrl(link);
-    logger.info("image URL: ", imageUrl);
+// async function forwardMessageWithImage(client: Whatsapp, link: string) {
+//   try {
+//     const imageUrl = await getValidDynamicImageUrl(link);
+//     const forwardMessage = `${sequencePrefix}${linkCounter}\n${link}`;
+//     linkCounter++;
 
+//     if (imageUrl) {
+//       await client.sendImage(groupBID, imageUrl, "image.jpg", forwardMessage);
+//     } else {
+//       await client.sendText(groupBID, forwardMessage);
+//     }
+//   } catch (error) {
+//     logger.error("Error forwarding message with image:", error);
+//   }
+// }
+
+async function forwardMessage(client: Whatsapp, link: string) {
+  try {
     const forwardMessage = `${sequencePrefix}${linkCounter}\n${link}`;
     linkCounter++;
-
-    if (imageUrl) {
-      await client.sendImage(groupBID, imageUrl, "image.jpg", forwardMessage);
-      logger.info(
-        `Forwarded to Group B with image and caption: ${forwardMessage}`,
-      );
-    } else {
-      logger.warn(
-        "Failed to find a valid dynamic image URL. Sending link only.",
-      );
-      await client.sendText(groupBID, forwardMessage);
-    }
+    await client.sendText(groupBID, forwardMessage);
   } catch (error) {
     logger.error("Error forwarding message with image:", error);
   }
@@ -139,31 +157,46 @@ async function extractLink(message: string): Promise<string | null> {
   return match ? match[0] : null;
 }
 
-async function getValidDynamicImageUrl(link: string): Promise<string | null> {
-  let driver = await new Builder().forBrowser("chrome").build();
+// async function getValidDynamicImageUrl(link: string): Promise<string | null> {
+//   let driver = await new Builder().forBrowser("chrome").build();
+//   try {
+//     await driver.get(link);
+//     const imageElement = await driver.wait(
+//       until.elementLocated(By.css("div.imageContainer__f8ddf3a2 picture img")),
+//       5000,
+//     );
+//     const imageSrc = await imageElement.getAttribute("src");
+//     await driver.quit();
+//     return imageSrc || null;
+//   } catch (error) {
+//     logger.error("Error extracting dynamic image URL:", error);
+//     await driver.quit();
+//     return null;
+//   }
+// }
+
+async function getGroupIDs(client: Whatsapp) {
   try {
-    await driver.get(link);
-    logger.info("Navigated to the link, waiting for image to load.");
-
-    const imageElement = await driver.wait(
-      until.elementLocated(By.css("div.imageContainer__f8ddf3a2 picture img")),
-      5000,
+    const chats = await client.getAllChats();
+    const groupChats = (chats as Chat[]).filter((chat) =>
+      chat.id._serialized.endsWith("@g.us"),
     );
-
-    const imageSrc = await imageElement.getAttribute("src");
-    await driver.quit();
-
-    return imageSrc ? imageSrc : null;
+    for (const group of groupChats) {
+      const chatDetails = await client.getChatById(group.id._serialized);
+      const groupName = chatDetails.name || "Unnamed Group";
+      logger.info(
+        `Group Name: ${groupName}, Group ID: ${group.id._serialized}`,
+      );
+    }
   } catch (error) {
-    logger.error("Error extracting dynamic image URL:", error);
-    await driver.quit();
-    return null;
+    logger.error("Error fetching group IDs:", error);
   }
 }
 
 async function main() {
   const client = await initializeBot();
   if (client) {
+    await getGroupIDs(client);
     await setupGroupMessageHandler(client);
   } else {
     logger.error("Failed to initialize the bot, exiting.");
