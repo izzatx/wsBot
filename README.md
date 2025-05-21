@@ -8,7 +8,7 @@ Built using [venom-bot](https://github.com/orkestral/venom) and powered by `.env
 ## 🚀 Features
 
 - 📥 Auto-reply to incoming messages
-- 🔄 Forward messages between Group A and Group B
+- 🔄 Forward messages between Group A and Group B ( non official Whatsapp API )
 - ⚙️ Fully customizable group IDs via `.env`
 - 🔐 Environment variable support using `dotenv`
 - 📦 Written in clean, modular TypeScript
@@ -22,15 +22,3 @@ Built using [venom-bot](https://github.com/orkestral/venom) and powered by `.env
 - Railway for cloud deployment
 
 ---
-
-## 📂 Project Structure
-
-```bash
-whatsappBot/
-├── src/
-│   └── index.ts          # Main entry point
-├── .env                  # Group ID settings (do NOT commit)
-├── .gitignore            # Includes node_modules, .env
-├── package.json          # Scripts and dependencies
-└── tsconfig.json         # TypeScript settings
-```
