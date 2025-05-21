@@ -1,8 +1,12 @@
 import { logger } from "../utils/logger";
 import { create, Whatsapp, Message, Chat } from "venom-bot";
+import "dotenv/config";
 
-const groupAID = "120363193416397252@g.us";
-const groupBID = "120363357006932873@g.us";
+// require for env file
+require("dotenv").config();
+
+const groupAID = process.env.GROUP_A_ID || "";
+const groupBID = process.env.GROUP_B_ID || "";
 
 let linkCounter = 1;
 let sequencePrefix = "A";

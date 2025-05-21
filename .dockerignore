@@ -1,0 +1,9 @@
+node_modules
+logs
+dist
+.env
+.git
+.gitignore
+.vscode
+*.zip
+*.log

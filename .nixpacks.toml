@@ -6,3 +6,6 @@ cmds = ["npm run build"]
 
 [phases.start]
 cmd = "npm start"
+
+[variables]
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "false"
